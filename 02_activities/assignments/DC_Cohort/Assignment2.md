@@ -14,9 +14,9 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] 🚨🚨🚨 After forking, open the **Actions** tab in your own SQL repository. If prompted, click **I understand my workflows, go ahead and enable them** before opening your assignment pull request. This enables automatic SQL feedback on your pull request.
-- [ ] Create a branch called `assignment-two`.
-- [ ] Ensure that the repository is public.
+- [x] 🚨🚨🚨 After forking, open the **Actions** tab in your own SQL repository. If prompted, click **I understand my workflows, go ahead and enable them** before opening your assignment pull request. This enables automatic SQL feedback on your pull request.
+- [x] Create a branch called `assignment-two`.
+- [x] Ensure that the repository is public.
 - [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
 - [ ] Verify that the link is accessible in a private browser window.
 
@@ -57,7 +57,10 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+To retain changes on the CUSTOMER_ADDRESS table, type 2 slowly changing dimensions should be use for the CUSTOMER_ADDRESS table. In this type, historical data is preserved and a record of addresses is created. This type is interesting if the store wants to keep track of the customers' address over time.
+
+To overwrite old data with new data, type 1 slowly changing dimensions should be use for the CUSTOMER_ADDRESS table. In this type no historical data is preserved. This type is interesting to use if the store wants to update the customers' address when it changes, replacing the old address with the new one.
+
 ```
 
 ***
@@ -192,5 +195,9 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+The article Neural Nets Are Just People All the Way Down, written by Vicki Boykis, raises some interesting questions about machine learning development. Although it may not seem obvious when we interact with these systems, this technology requires a great deal of human labour and decision-making.
+This highlights issues related to who does this work and under what conditions. As Boykis illustrates, thousands of workers are often required to manually label images, receiving very low compensation for their work. Additionally, graduate students are often involved in this process and rarely receive proper credit for the work they do.
+Considering that these systems rely on human labour to function automatically, human decision-making is also involved throughout the process, such as when labelling images and assigning them to specific categories. Depending on how these classifications are made, they can generate significant biases and lead to other consequences when the systems are used in sensitive areas.
+Boykis also raises questions about who has the power to define categories, establish classifications, and determine what is considered correct information. WordNet and ImageNet depend on human decisions about language, meanings, and classifications. These decisions may appear technical, but they are also influenced by cultural values and social contexts. So, how can we determine who should have this power?
+Human labour will always be necessary at some point in the development of machine learning systems. As the article describes, researchers had to identify offensive categories within ImageNet and work to remove or correct them. This demonstrates that technology cannot be separated from the society in which it is developed.
 ```
